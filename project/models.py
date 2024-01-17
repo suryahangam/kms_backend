@@ -12,7 +12,7 @@ class Project(TimestampedModel):
         ('abandoned', 'Abandoned'),
         ('on_hold', 'On Hold'),
     ]
-    project_id = models.CharField(max_length=50, default=generate_unique_ID(), 
+    project_id = models.CharField(max_length=50, default=generate_unique_ID, 
                                   unique=True)
     project_title = models.CharField(max_length=200)
     description = models.TextField(null=True)
